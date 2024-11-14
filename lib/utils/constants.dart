@@ -1,5 +1,4 @@
 // styling
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
@@ -48,3 +47,4 @@ baseLayout(Widget TargetPage) {
 customPadding(Widget targetWidget) {
   return Padding(padding: EdgeInsets.all(24), child: targetWidget);
 }
+
