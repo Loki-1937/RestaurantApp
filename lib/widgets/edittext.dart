@@ -17,8 +17,7 @@ class _EditTextWidgetState extends State<EditTextWidget> {
   @override
   Widget build(BuildContext context) {
     getAlteredText() {
-      String text = widget.controller!.text;
-      print(text);
+      String text = widget.controller!.text; 
     }
 
     return TextField(

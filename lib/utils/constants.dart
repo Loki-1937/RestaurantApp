@@ -12,13 +12,19 @@ const Color textGray = Color(0xff4F4F4F);
 const Color textHint = Color(0xff9A9A9A);
 
 const buttonPadding = EdgeInsets.symmetric(horizontal: 16);
-const borderRadius = BorderRadius.all(Radius.circular(10));
-const buttonMinSize = Size(100,40);
+const borderRadius = BorderRadius.all(Radius.circular(24));
+const buttonMinSize = Size(100, 40);
+const roundedRectangularBorder = RoundedRectangleBorder(
+  borderRadius: borderRadius,
+);
 
 // constant texts
 const String appName = "The Restaurant";
 const String signUpPageTitle = "Welcome to $appName";
 const String signUpPageSubtitle = "Where happiness is food...";
+
+const String loginPageTitle = "Welcome back...";
+const String PasswordResetTitle = "Password Reset";
 
 const String firstNamePlaceHolder = "first name ";
 const String lastNamePlaceHolder = "last name ";
@@ -26,3 +32,19 @@ const String emailPlaceHolder = "johndoe@example.com ";
 const String passwordPlaceHolder = "*********";
 
 const String buttonRegister = "Register";
+const String buttonLogin = "Login";
+const String buttonPasswordReset = "send reset password";
+
+// scaffold
+baseLayout(Widget TargetPage) {
+  return Scaffold(
+    appBar: AppBar(
+      backgroundColor: primaryColor,
+    ),
+    body: TargetPage,
+  );
+}
+
+customPadding(Widget targetWidget) {
+  return Padding(padding: EdgeInsets.all(24), child: targetWidget);
+}
