@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../authentication/login/login.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -13,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: const Placeholder(),
+      body: const LoginPage(),
     );
   }
 }

@@ -1,9 +1,13 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class EditTextWidget extends StatefulWidget {
-  const EditTextWidget({super.key, this.styleVariation, this.hintText});
-  final String? styleVariation;
+  const EditTextWidget(
+      {super.key, this.hintText, this.callback, this.controller});
   final String? hintText;
+  final VoidCallback? callback;
+  final TextEditingController? controller;
 
   @override
   State<EditTextWidget> createState() => _EditTextWidgetState();
@@ -12,10 +16,17 @@ class EditTextWidget extends StatefulWidget {
 class _EditTextWidgetState extends State<EditTextWidget> {
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    getAlteredText() {
+      String text = widget.controller!.text;
+      print(text);
+    }
+
+    return TextField(
+      onChanged: getAlteredText(),
+      controller: widget.controller,
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        hintText: 'Enter a search term',
+        border: const OutlineInputBorder(),
+        hintText: widget.hintText,
       ),
     );
   }
