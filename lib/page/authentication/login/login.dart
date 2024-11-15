@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_restaurant/page/authentication/signup/signup.dart';
 import '../../../widgets/text.dart';
 import '../../../utils/constants.dart' as globalConstants;
+import '../../home/welcomehome.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -53,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
             extractUserBio();
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const SignupPage(),
+                builder: (context) => const WelcomehomePage(),
               ),
             );
           },
